@@ -3903,6 +3903,49 @@ body.noscroll {
   /* ensure object-fit takes effect in modern browsers */
   object-position: center center !important;
 }
+/* Clients grid: make columns responsive */
+#clients .row > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Flex wrapper that *allows* shrinking on mobile */
+#clients .logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 110px;              /* desktop-ish default */
+  padding: 6px 8px;
+  overflow: hidden;           /* don't let wide logos spill out */
+  background: transparent;
+  border: 0;
+}
+
+#clients .logo > a {
+  display: block;
+  min-width: 0;               /* <-- critical for flex children to shrink */
+  max-width: 100%;
+}
+
+#clients .logo img {
+  display: block !important;
+  max-width: 100% !important; /* scale down with column */
+  max-height: 100% !important;
+  width: auto;                /* keep aspect */
+  height: auto;
+  object-fit: contain;        /* letterbox inside the box */
+}
+
+/* Tighter, smaller boxes on phones; scale up progressively */
+@media (max-width: 767px) {
+  #clients .logo { height: 70px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #clients .logo { height: 90px; }
+}
+@media (min-width: 992px) {
+  #clients .logo { height: 110px; }
+}
 
 /* If the template sets rules on section-we-made-* image grids,
    overrule them specifically in our two sections */
@@ -3985,3 +4028,112 @@ body.noscroll {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
+
+/* Hide hover overlays on mobile */
+@media (max-width: 767px) {
+  .section#projects-video .over-area {
+    display: none !important;
+  }
+}
+
+/* Hide hover overlays on mobile (all project sections) */
+@media (max-width: 767px) {
+  .over-area {
+    display: none !important;
+  }
+}
+
+/* Grid padding fix */
+#clients .row > [class*="col-"] {
+  padding: 10px;
+}
+
+/* Logo box */
+#clients .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;         /* default desktop height */
+  overflow: hidden;     /* crop overflow */
+  background: transparent;
+}
+
+/* Allow shrinkage */
+#clients .logo a {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Image scaling */
+#clients .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;  /* keep aspect ratio */
+}
+
+/* Smaller boxes on phones */
+@media (max-width: 767px) {
+  #clients .logo { height: 60px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #clients .logo { height: 75px; }
+}
+@media (min-width: 992px) {
+  #clients .logo { height: 90px; }
+}
+
+/* ===== Clients grid: force proper centering & containment ===== */
+#clients .row > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Make each logo cell a centered flex box */
+#clients .logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 90px;           /* tweak as you like */
+  padding: 6px 8px;
+  overflow: visible;      /* don't clip */
+  background: transparent;
+  text-align: center;
+}
+
+/* Anchor should not shrink weirdly */
+#clients .logo > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Real fix: let images scale naturally, no absolute positioning */
+#clients .list-logos img {
+  width: auto !important;        /* kill old width:120px */
+  max-width: 100% !important;    /* scale down to fit column */
+  max-height: 100% !important;   /* keep inside the box */
+  height: auto !important;
+  object-fit: contain !important; /* never crop */
+  display: block !important;
+}
+
+/* Hard override the theme's "first-child" absolute-centering trick */
+#clients .list-logos img:first-child,
+#clients .list-logos img:first-child:hover {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Responsive box heights so they don’t feel tiny on desktop */
+@media (max-width: 767px) { #clients .logo { height: 70px; } }
+@media (min-width: 768px) and (max-width: 991px) { #clients .logo { height: 80px; } }
+@media (min-width: 992px) { #clients .logo { height: 100px; } }

@@ -46,7 +46,41 @@
     .ensemble-card .card {
       height: 100%;
     }
-  </style>
+    
+  
+  /* Keep RECENT NEWS list left-aligned */
+  .news-list { list-style-position: outside; padding-left: 20px; margin: 0; text-align: left !important; }
+  .news-list li { text-align: left !important; margin-bottom: 6px; }
+  .news-toggle.btn-link { padding-left: 0; padding-right: 0; }
+
+  /* Center all Spotify embeds */
+  iframe[data-testid="embed-iframe"] { display: block; margin: 20px auto; }
+
+  /* Optional: make ensemble cards equal height */
+  .ensemble-card .card { height: 100%; }
+
+  /* Responsive 16:9 video wrapper (keep just one definition on the page) */
+  .video-16x9 {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 16px auto;
+  }
+  .video-16x9::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+  .video-16x9 > iframe {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    border-radius: 8px;
+  }
+</style>
+
 
 </head>
 
@@ -290,110 +324,111 @@
 
     
    <!-- ===== MUSIC PROJECTS (square thumbs) ===== -->
-<div class="section section-we-made-3 section-with-hover" id="projects-music">
-  <div class="container">
-    <div class="text-area">
-      <div class="title add-animation">
-        <h2>Music Projects</h2>
-        <div class="separator-container">
-          <div class="separator line-separator">♦</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-1">
-          <img src="assets/img/comp_photos/arrow-of-time-cover_orig.png" alt="Arrow of Time">
-          <div class="over-area over-area-sm" data-target="project_1">
-            <div class="content">
-              <h4>Arrow of Time</h4>
-              <p>Composition • Jazz</p>
-            </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
-               target="_blank" rel="noopener">More Details</a>
+   <div class="section section-we-made-3 section-with-hover" id="projects-music">
+    <div class="container">
+      <div class="text-area">
+        <div class="title add-animation">
+          <h2>Music Projects</h2>
+          <div class="separator-container">
+            <div class="separator line-separator">♦</div>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-2">
-          <img src="assets/img/comp_photos/horizion-problem-with-words_1.jpeg" alt="Horizon Problem">
-          <div class="over-area over-area-sm" data-target="project_2">
-            <div class="content">
-              <h4>Horizon Problem</h4>
-              <p>Composition • Jazz</p>
+  
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-1">
+            <img src="assets/img/comp_photos/arrow-of-time-cover_orig.png" alt="Arrow of Time">
+            <div class="over-area over-area-sm" data-target="project_1">
+              <div class="content">
+                <h4>Arrow of Time</h4>
+                <p>Composition • Jazz</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
+                 target="_blank" rel="noopener">More Details</a>
             </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
-               target="_blank" rel="noopener">More Details</a>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-3">
-          <img src="assets/img/comp_photos/sister-2520whisper_orig.jpg" alt="Sister Whisper">
-          <div class="over-area over-area-sm" data-target="project_3">
-            <div class="content">
-              <h4>Sister Whisper</h4>
-              <p>Mixing • Recording</p>
+  
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-2">
+            <img src="assets/img/comp_photos/horizion-problem-with-words_1.jpeg" alt="Horizon Problem">
+            <div class="over-area over-area-sm" data-target="project_2">
+              <div class="content">
+                <h4>Horizon Problem</h4>
+                <p>Composition • Jazz</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
+                 target="_blank" rel="noopener">More Details</a>
             </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/6uwAzBAER9t8TnqvpmOAsB?si=dYCDICFOQCCqJ1RLuYI5wg"
-               target="_blank" rel="noopener">More Details</a>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-1">
-          <img src="assets/img/comp_photos/sunflowerconjecture-new-text_1.png" alt="Sunflower Conjecture">
-          <div class="over-area over-area-sm" data-target="project_4">
-            <div class="content">
-              <h4>Sunflower Conjecture</h4>
-              <p>Composition • Jazz</p>
+  
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-3">
+            <img src="assets/img/comp_photos/sister-2520whisper_orig.jpg" alt="Sister Whisper">
+            <div class="over-area over-area-sm" data-target="project_3">
+              <div class="content">
+                <h4>Sister Whisper</h4>
+                <p>Mixing • Recording</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/6uwAzBAER9t8TnqvpmOAsB?si=dYCDICFOQCCqJ1RLuYI5wg"
+                 target="_blank" rel="noopener">More Details</a>
             </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
-               target="_blank" rel="noopener">More Details</a>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-2">
-          <img src="assets/img/comp_photos/oe-justdropapin-1_1_orig.jpg" alt="Just Drop a Pin">
-          <div class="over-area over-area-sm" data-target="project_5">
-            <div class="content">
-              <h4>Just Drop a Pin</h4>
-              <p>Out of Bounds Ensemble • Composition</p>
+  
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-1">
+            <img src="assets/img/comp_photos/sunflowerconjecture-new-text_1.png" alt="Sunflower Conjecture">
+            <div class="over-area over-area-sm" data-target="project_4">
+              <div class="content">
+                <h4>Sunflower Conjecture</h4>
+                <p>Composition • Jazz</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
+                 target="_blank" rel="noopener">More Details</a>
             </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/1u4YK2ycbpgNsYgn5fj63q?si=VIkWuCwrRX2ImMp9ZOfuMA"
-               target="_blank" rel="noopener">More Details</a>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project add-animation animation-3">
-          <img src="assets/img/comp_photos/nightfall-2_orig.jpeg" alt="Nightfall">
-          <div class="over-area over-area-sm" data-target="project_6">
-            <div class="content">
-              <h4>Nightfall</h4>
-              <p>Concert Band • Composition</p>
+  
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-2">
+            <img src="assets/img/comp_photos/oe-justdropapin-1_1_orig.jpg" alt="Just Drop a Pin">
+            <div class="over-area over-area-sm" data-target="project_5">
+              <div class="content">
+                <h4>Just Drop a Pin</h4>
+                <p>Out of Bounds Ensemble • Composition</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/1u4YK2ycbpgNsYgn5fj63q?si=VIkWuCwrRX2ImMp9ZOfuMA"
+                 target="_blank" rel="noopener">More Details</a>
             </div>
-            <a class="btn hidden-sm hidden-xs" 
-               href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
-               target="_blank" rel="noopener">More Details</a>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-4">
+          <div class="project add-animation animation-3">
+            <img src="assets/img/comp_photos/nightfall-2_orig.jpeg" alt="Nightfall">
+            <div class="over-area over-area-sm" data-target="project_6">
+              <div class="content">
+                <h4>Nightfall</h4>
+                <p>Concert Band • Composition</p>
+              </div>
+              <a class="btn hidden-sm hidden-xs" 
+                 href="https://open.spotify.com/artist/6McdDnkj4SHvgY3VWXM6Na?si=mlOoR_hOQtWyh6Uu9UcF-A"
+                 target="_blank" rel="noopener">More Details</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+    
   
 <!-- ===== END PHOTOS OF MUSIC COMP PROJECTS ===== -->
 
@@ -616,6 +651,7 @@
     #filmReelPlayerComposition .rc-controls{grid-template-columns:auto auto auto 1fr}
   }
 </style>
+
 
 <script>
 (function () {
@@ -842,36 +878,7 @@
 
 
 
-<!-- ===== VIDEO PROJECTS (show full posters, no cropping) ===== -->
-<style>
-  /* Consistent poster aspect ratio and tidy grid spacing */
-  .project.poster-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #f4f4f4; /* neutral background for empty space */
-  }
-  .project.poster-card .poster-frame {
-    width: 100%;
-    aspect-ratio: 2 / 3;           /* standard poster ratio */
-    background: #f4f4f4;
-    overflow: hidden;
-    display: block;
-  }
-  .project.poster-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;            /* shrink image to fit fully */
-    display: block;
-    background: #f4f4f4;
-  }
-  /* Optional: ensure consistent spacing between rows */
-  #projects-video .col-lg-4,
-  #projects-video .col-md-4,
-  #projects-video .col-sm-6 {
-    margin-bottom: 24px;
-  }
-</style>
+
 
 <div class="section section-we-made-3 section-with-hover" id="projects-video">
   <div class="container">
@@ -886,94 +893,91 @@
     </div>
 
     <div class="row">
-      <!-- 1 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-1">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/a-portrait-new-credits_orig.jpeg" alt="Documentary Session">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_1">
-            <div class="content">
-              <h4>Festival Film</h4>
-              <p>Scoring • Post</p>
-            </div>
-          </div>
-        </div>
+     <!-- 1 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-1">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/a-portrait-new-credits_orig.jpeg" alt="Documentary Session">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_1">
+      <div class="content">
+        <h4>Festival Film</h4>
+        <p>Scoring • Post</p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- 2 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-2">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/NoLookBack.jpeg" alt="Project Poster">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_2">
-            <div class="content">
-              <h4>Festival Film</h4>
-              <p>Scoring • Post </p>
-            </div>
-          </div>
-        </div>
+<!-- 2 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-2">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/NoLookBack.jpeg" alt="Project Poster">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_2">
+      <div class="content">
+        <h4>Festival Film</h4>
+        <p>Scoring • Post </p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- 3 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-3">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/Anintenseflareoflight.png" alt="Short Film">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_3">
-            <div class="content">
-              <h4>Documentary</h4>
-              <p>Scoring</p>
-            </div>
-          </div>
-        </div>
+<!-- 3 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-3">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/Anintenseflareoflight.png" alt="Short Film">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_3">
+      <div class="content">
+        <h4>Documentary</h4>
+        <p>Scoring</p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- 4 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-4">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/Youaremyaudience.png" alt="Short Film">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_4">
-            <div class="content">
-              <h4>Documentary</h4>
-              <p>Scoring</p>
-            </div>
-          </div>
-        </div>
+<!-- 4 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-4">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/Youaremyaudience.png" alt="Short Film">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_4">
+      <div class="content">
+        <h4>Documentary</h4>
+        <p>Scoring</p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- 5 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-5">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/PlankPoster.jpg" alt="Short Film">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_5">
-            <div class="content">
-              <h4>Feature Length Film</h4>
-              <p>Scoring</p>
-            </div>
-          </div>
-        </div>
+<!-- 5 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-5">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/PlankPoster.jpg" alt="Short Film">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_5">
+      <div class="content">
+        <h4>Feature Length Film</h4>
+        <p>Scoring</p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- 6 -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="project poster-card add-animation animation-6">
-          <span class="poster-frame">
-            <img src="assets/img/Film_Posters/Don't Drink and Drive Film Poster.png" alt="Short Film">
-          </span>
-          <div class="over-area over-area-sm" data-target="vproj_6">
-            <div class="content">
-              <h4>Festival Film</h4>
-              <p>Scoring</p>
-            </div>
-          </div>
-        </div>
+<!-- 6 -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="project poster-card add-animation animation-6">
+    <span class="poster-frame">
+      <img src="assets/img/Film_Posters/Don't Drink and Drive Film Poster.png" alt="Short Film">
+    </span>
+    <div class="over-area over-area-sm" data-target="vproj_6">
+      <div class="content">
+        <h4>Festival Film</h4>
+        <p>Scoring</p>
       </div>
     </div>
   </div>
@@ -1474,42 +1478,106 @@
        <div style="text-align:center;">
         <h2>Video Snips</h2>
         
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rjHId_rElQ4?si=Uajyb_Heho-99X_h" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fGJ8BgYIYRo?si=OMWPgyBrAANrGia3" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Replace all your iframes with this pattern -->
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/rjHId_rElQ4?si=Uajyb_Heho-99X_h"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/K7LjBmnXXAY" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/fGJ8BgYIYRo?si=OMWPgyBrAANrGia3"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSKogZ_mHg8?si=P_TZgiFKypk794WM" title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y2wKLTP5chc" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rjyD5FlxAW0" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cZuXTd2EOX4" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/K7LjBmnXXAY"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pB3gptm3ano?si=sKOr7QJUvrFxrbcA" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/WSKogZ_mHg8?si=P_TZgiFKypk794WM"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qOxrvSj4BBE?si=01UD0alzEX5Uj5P8" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/Y2wKLTP5chc"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lSBM7Ysl13g?si=-LfDj1w5T06UWOpX" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0y9bKda17lc?si=c-Mej2txyJc6NHyp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wokzqM_Ybqc?si=OV32d2DXRJ0hnQZ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/rjyD5FlxAW0"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jvdcrohw3Ds?si=FDlJqo76k7afpSK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/cZuXTd2EOX4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/pB3gptm3ano?si=sKOr7QJUvrFxrbcA"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/qOxrvSj4BBE?si=01UD0alzEX5Uj5P8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/lSBM7Ysl13g?si=-LfDj1w5T06UWOpX"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/0y9bKda17lc?si=c-Mej2txyJc6NHyp"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/wokzqM_Ybqc?si=OV32d2DXRJ0hnQZ6"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+
+<div class="video-16x9">
+  <iframe src="https://www.youtube.com/embed/Jvdcrohw3Ds?si=FDlJqo76k7afpSK8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
       <!-- ===== END VIDEO EXAMPLES ===== -->
 
       
@@ -1521,69 +1589,81 @@
 
 
       
-        <!-- ===== Start of Clients ===== -->
-<div class="section section-clients-1" id="clients" style="margin-top: 185px;">
- 
-    <div class="list-logos">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="logo add-animation animation-1">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/screenshot-2023-04-08-at-2-31-27-pm_orig.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-2">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/screenshot-2023-04-08-at-2-32-31-pm_orig.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-2">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/hometownhero.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-2">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/Storiesfordayslogo.png" />
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-3">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/screenshot-2023-04-08-at-2-41-29-pm_orig.png" />
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="logo add-animation animation-3">
-              <a href="#">
-                <img alt="..." src="assets/img/Film_logos/hfc-full-rgb.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-2">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/coefman cinematics.jpg" />
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="logo add-animation animation-4">
-            <a href="#">
-              <img alt="..." src="assets/img/Film_logos/screenshot-2023-04-08-at-3-24-10-pm_orig.png" />
-            </a>
-          </div>
+  
+  <!-- ===== Start of Clients ===== -->
+<div class="section section-clients-1" id="clients" style="margin-top:185px;">
+  <div class="list-logos">
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-1">
+          <a href="#">
+            <img src="assets/img/Film_logos/screenshot-2023-04-08-at-2-31-27-pm_orig.png" alt="Client logo">
+          </a>
         </div>
       </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-2">
+          <a href="#">
+            <img src="assets/img/Film_logos/screenshot-2023-04-08-at-2-32-31-pm_orig.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-2">
+          <a href="#">
+            <img src="assets/img/Film_logos/hometownhero.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-2">
+          <a href="#">
+            <img src="assets/img/Film_logos/Storiesfordayslogo.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-3">
+          <a href="#">
+            <img src="assets/img/Film_logos/screenshot-2023-04-08-at-2-41-29-pm_orig.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-3">
+          <a href="#">
+            <img src="assets/img/Film_logos/hfc-full-rgb.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-2">
+          <a href="#">
+            <img src="assets/img/Film_logos/coefman cinematics.jpg" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="logo add-animation animation-4">
+          <a href="#">
+            <img src="assets/img/Film_logos/screenshot-2023-04-08-at-3-24-10-pm_orig.png" alt="Client logo">
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
-<!-- ===== END of Clients ===== -->
+<!-- ===== End of Clients ===== -->
+
       
       <style>
         /* Logo strip: center, no cropping */
@@ -1671,15 +1751,19 @@
       display: block !important;
     }
   
-    /* VIDEO — show full posters without cropping (letterbox if needed) */
-    #projects-video .project img {
-      width: 100% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      background: #000 !important; /* optional matte behind poster */
-      display: block !important;
-    }
+    #projects-video .project.poster-card .poster-frame { width: 100%; aspect-ratio: 2 / 3; background: #f4f4f4; overflow: hidden; display: block; }
+#projects-video .project.poster-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #f4f4f4;
+}
+
+    
   </style>
+
+  
 
 </body>
 
@@ -1689,6 +1773,7 @@
 
 <!--   file for adding vertical points where we activate the elements animation   -->
 <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+
 
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="assets/js/modernizr.js"></script>
