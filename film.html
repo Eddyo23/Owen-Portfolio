@@ -586,6 +586,10 @@
             <li data-target="#oe-carousel-left" data-slide-to="0" class="active"></li>
             <li data-target="#oe-carousel-left" data-slide-to="1"></li>
             <li data-target="#oe-carousel-left" data-slide-to="2"></li>
+            <li data-target="#oe-carousel-left" data-slide-to="3"></li>
+            <li data-target="#oe-carousel-left" data-slide-to="4"></li>
+            <li data-target="#oe-carousel-left" data-slide-to="5"></li>
+            <li data-target="#oe-carousel-left" data-slide-to="6"></li>
           </ol>
 
           <!-- Slides -->
@@ -609,6 +613,36 @@
               <div class="carousel-caption oe-caption">
                 <h4 class="oe-cap-title">Festigious</h4>
                 <p class="oe-cap-sub">Scoring</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="oe-rotated-award">
+                <img src="assets/img/48HrWin.png" alt="The 48 Hour Film Project Louisville 2026 award for Mobscenery">
+              </div>
+              <div class="carousel-caption oe-caption">
+                <h4 class="oe-cap-title">The 48 Hour Film Project</h4>
+                <p class="oe-cap-sub">Best Overall Film — Group A Audience Award, Second Place</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/img/IMG_0179.JPG" alt="Red carpet at The Los Angeles Tribune International Film Festival">
+              <div class="carousel-caption oe-caption">
+                <h4 class="oe-cap-title">The Los Angeles Tribune International Film Festival</h4>
+                <p class="oe-cap-sub">Red Carpet</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/img/IMG_0180.JPG" alt="Filmmaker panel at The Los Angeles Tribune International Film Festival">
+              <div class="carousel-caption oe-caption">
+                <h4 class="oe-cap-title">The Los Angeles Tribune International Film Festival</h4>
+                <p class="oe-cap-sub">Filmmaker Panel</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/img/IMG_0181.JPG" alt="Interview at The Los Angeles Tribune International Film Festival">
+              <div class="carousel-caption oe-caption">
+                <h4 class="oe-cap-title">The Los Angeles Tribune International Film Festival</h4>
+                <p class="oe-cap-sub">Festival Interview</p>
               </div>
             </div>
           </div>
@@ -693,6 +727,24 @@
     height: auto;
     object-fit: contain;
     background-color: #000; /* letterboxing */
+  }
+
+  /* The supplied award photo is rotated in the source file. */
+  .oe-rotated-award {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1542 / 1206;
+    overflow: hidden;
+    background-color: #000;
+  }
+  .oe-rotated-award > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 78.21%;
+    max-width: none;
+    height: auto;
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 
   /* Optional: enforce a consistent viewport height for alignment */
